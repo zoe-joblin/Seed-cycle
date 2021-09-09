@@ -4,7 +4,7 @@ const router = express.Router()
 const db = require('../db/db')
 
 router.get('/', (req, res) => {
-  return db.getAllFruit()
+  return db.getAllPlants()
     .then(fruit => {
       return res.json(fruit)
     })
