@@ -13,8 +13,7 @@ const getAllPlantsandCategories = (db = connection) => {
 // TODO: GET plant (:id)
 const getPlant = (id, db = connection) => {
   return db('listings')
-    .select()
-    .where('listings.id', id)
+    .where('id', id)
     .first()
 }
 
