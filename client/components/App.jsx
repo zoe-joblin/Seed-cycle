@@ -1,12 +1,18 @@
 import React from 'react'
 
-import Fruit from './Fruit'
+import Heaader from './Header'
+import Plants from './Plants'
+import Footer from './Footer'
 
 const App = () => {
   return (
     <>
-      <h1>Hola! Fruit time!</h1>
-      <Fruit />
+      
+      <Heaader />
+      <Plants />
+
+      {/* MAKE A FOOTER WITH ALL OUR INFO */}
+      <Footer />
     </>
   )
 }
