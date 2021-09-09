@@ -14,7 +14,6 @@ router.get('/', (req, res) => {
     })
 })
 
-// // TODO: GET plant (:id)
 router.get('/:id', (req, res) => {
   return db.getPlant(req.params.id)
     .then(fruit => {
@@ -28,9 +27,11 @@ router.get('/:id', (req, res) => {
 
 // TODO: POST new plant
 router.post('/new', (req, res) => {
-  return db.getAllPlants()
-    .then(fruit => {
-      return res.json(fruit)
+  const newPlant = req.body
+  return db.addPlant(newPlant)
+    .then(idArr => {
+      newPlant.id = idArr[0]
+      return res.json(newPlant)
     })
     .catch(err => {
       console.log(err.message)
