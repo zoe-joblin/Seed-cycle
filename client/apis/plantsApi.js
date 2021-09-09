@@ -14,17 +14,19 @@ export function getAllPlants() {
 export function getPlant(id) {
     if (mock) return Promise.resolve(mockData[id]);
     return request
-        .get(apiRoot + "/plants/"+id)
-        .then(res => res.body);
+    .get(apiRoot + "/plants/"+id)
+    .then(res => res.body);
 }
 
 export function deletePlant(id) {
+    if (mock) return Promise.resolve();
     return request
-        .del(apiRoot + "/plants/"+id)
-        .then(res => res.body);
+    .del(apiRoot + "/plants/"+id)
+    .then(res => res.body);
 }
 
-export function addPlant(postData) {
+export function postPlant(postData) {
+    if (mock) return Promise.resolve(mockData[2]);
     return request
       .post(apiRoot + "/plants")
       .send(postData)
