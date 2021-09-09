@@ -1,5 +1,95 @@
-html, body {
-  background-color: #eeebe4;
-  color: #28282e;
-  font-family: 'Lato', sans-serif;
+body {
+  /* background-color: green; */
+  color: black;
+  font-family: 'Tahoma', sans-serif;
+  background-image: linear-gradient(#b5fcb5, PaleTurquoise );
+  height: 100%;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 0;
+}
+
+.header-container-image img {
+  height: 250px;
+}
+
+.logo {
+  height: 250px;
+  /* float: left; */
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.plant-container {
+  background-color: white;
+  height: 400px;
+  width: 300px;
+  margin: 20px auto;
+  background-color: #DAAD86;
+  border: 5px solid #BC986A;
+  border-radius: 45px;
+}
+
+.plant-container img {
+  height: 50%;
+  width: 100%;
+  border-radius: 45px 45px 0 0;
+}
+
+.plant-name {
+  font-size: 1.35rem;
+}
+
+.plant-container-heading, .plant-container-body {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 10px;
+}
+
+.plant-category {
+  margin: auto 0;
+}
+
+.plant-container hr {
+  border-top: 1px solid white;
+}
+
+a, a:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #56b456;
+  color: black;
+  border: 1px solid black;
+  height: 35px;
+  width: 65%;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+a:hover {
+  background-color: PaleTurquoise
+}
+
+.footer-container {
+  background-color: #DAAD86;
+  /* height: 50px;
+  width: 100vh;
+  margin: 0; */
 }
