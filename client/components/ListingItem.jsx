@@ -1,12 +1,8 @@
 import React from 'react'
 
-import plants from '../mock-data.json'
-
-
 
 const ListingItem = (props) => {
 
-  const 
   const { listing_title, category, suburb } = props.plants
 
   

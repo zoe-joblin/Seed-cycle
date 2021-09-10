@@ -1,13 +1,18 @@
-import React from "react"
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPlants } from "../actions/actions";
 
-import ListingItem from './ListingItem'
-
-
-function Listings (props) {
+function Listings () {
+  const plants = useSelector((state) => state.plants);
+  
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchPlants());
+  }, []);
 
     return (
         <div>
-            {props.plants.map(plant => {
+            {plants.map(plant => {
                 return (
                 <ListingItem plant={plant} />
 
