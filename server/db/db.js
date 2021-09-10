@@ -15,7 +15,6 @@ const getPlant = (id, db = connection) => {
     .first()
 }
 
-// TODO: POST new plant
 const addPlant = (plant, db = connection) => {
   return db('listings')
     .insert(plant)
@@ -24,8 +23,8 @@ const addPlant = (plant, db = connection) => {
 // TODO: DELETE plant
 const removePlant = (id, db = connection) => {
   return db('listings')
-    .where('listings.id', id)
-    .del()
+    .delete()
+    .where('id', id)
 }
 
 module.exports = {

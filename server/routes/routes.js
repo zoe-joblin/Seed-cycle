@@ -25,7 +25,6 @@ router.get('/:id', (req, res) => {
     })
 })
 
-// TODO: POST new plant
 router.post('/new', (req, res) => {
   const newPlant = req.body
   return db.addPlant(newPlant)
@@ -40,15 +39,12 @@ router.post('/new', (req, res) => {
 })
 
 // // TODO: DELETE plant
-// router.get('/:id/delete', (req, res) => {
-//   return db.getAllPlants()
-//     .then(fruit => {
-//       return res.json(fruit)
-//     })
-//     .catch(err => {
-//       console.log(err.message)
-//       return res.status(500).send('500 error :(')
-//     })
-// })
+router.delete('/:id/delete', (req, res) => {
+  const plantId = req.params.id
+  return db.removePlant(plantId)
+    .then(() => {
+      return res.status(200).send('deleted')
+    })
+})
 
 module.exports = router
