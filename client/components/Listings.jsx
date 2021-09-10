@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector, connect } from "react-redux";
 import { fetchPlants } from "../actions/actions";
 
+
 function Listings () {
-  const plants = useSelector((state) => state.plants);
+
+  const plants = useSelector((state) => state.plants)
+  console.log(plants)
   
   const dispatch = useDispatch();
   useEffect(() => {
@@ -13,6 +16,7 @@ function Listings () {
     return (
         <div>
             {plants.map(plant => {
+              console.log(plant)
                 return (
                 <ListingItem plant={plant} />
 
@@ -22,4 +26,5 @@ function Listings () {
     )
     }
 
-    export default Listings
+
+    export default connect()(Listings)

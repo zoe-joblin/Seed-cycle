@@ -7,6 +7,7 @@ export const DELETE_PLANT = "DELETE_PLANT";
 export function fetchPlants() {
   return (dispatch) => {
     getAllPlants().then((plants) => {
+      console.log(plants)
       dispatch({
         type: RECEIVE_PLANTS,
         plants: plants,

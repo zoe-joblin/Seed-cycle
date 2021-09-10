@@ -2,7 +2,7 @@ import { request } from "superagent";
 import mockData from "../mock-data.json";
 
 const apiRoot = "/api";
-const mock = true;
+const mock = false;
 
 export function getAllPlants() {
     if (mock) return Promise.resolve(mockData);
