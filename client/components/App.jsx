@@ -1,51 +1,24 @@
-import React from 'react'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom"
-// import connect from 'react-redux'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-
-
-import Header from './Header'
-import Plants from './Plants'
-import PlantDetail from './PlantDetail'
-import AddPlant from './AddPlant'
-import Listings from './Listings'
-import Footer from './Footer'
+import Header from "./Header";
+import Footer from "./Footer";
+import Listings from "./Listings";
+import AddPlant from "./AddPlant";
+import PlantDetail from "./PlantDetail";
 
 const App = () => {
   return (
     <Router>
-    <>
-      
-      <Heaader />
+      <Header />
       <Switch>
-          <Route exact path='/' component={Listings}/>
-        </Switch>
-
-      {/* MAKE A FOOTER WITH ALL OUR INFO */}
+        <Route exact path="/" component={Listings} />
+        <Route exact path="/add" component={AddPlant} />
+        <Route exact path="/:id" component={PlantDetail} />
+      </Switch>
       <Footer />
-
-      {/*  PLANT DETAILS */}
-      {/* <Header />
-      <PlantDetail/>
-      <Footer /> */}
-
-    </>
     </Router>
-  )
-}
+  );
+};
 
-// function mapState2Props (globalstate) {
-//   return {
-//     page: globalstate.page
-//   }
-// }
-
-
-// export default connect(mapState2Props)(App)
-
-export default App
+export default App;

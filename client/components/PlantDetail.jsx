@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PlantDetail = () => {
+const PlantDetail = ({ match }) => {
   return (
     <>
         <div className="detail-container">

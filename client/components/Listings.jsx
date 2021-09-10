@@ -16,15 +16,12 @@ function Listings ( {dispatch}) {
   }, []);
 
     return (
-        <div>
-            {plants.map(plant => {
-                return (
-                <ListingItem plant={plant} />
-
-                )
-            })}
-        </div>
-    )
+      <div className="main-container">
+        {plants.map((plant) => {
+          return <ListingItem className="" plant={plant} />;
+        })}
+      </div>
+    );
     }
 
 
