@@ -38,7 +38,7 @@ router.post('/new', (req, res) => {
     })
 })
 
-// // TODO: DELETE plant
+
 router.delete('/:id/delete', (req, res) => {
   const plantId = req.params.id
   return db.removePlant(plantId)
