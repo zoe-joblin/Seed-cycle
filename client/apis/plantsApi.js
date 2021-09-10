@@ -1,4 +1,4 @@
-import { request } from "superagent";
+import request from "superagent";
 import mockData from "../mock-data.json";
 
 const apiRoot = "/api/v1";
@@ -28,7 +28,7 @@ export function deletePlant(id) {
 export function postPlant(postData) {
     if (mock) return Promise.resolve(mockData[2]);
     return request
-      .post(apiRoot + "/plants.new")
+      .post(apiRoot + "/plants/new")
       .send(postData)
       .then(res => res.body);
 }

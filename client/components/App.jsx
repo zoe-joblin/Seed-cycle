@@ -9,7 +9,7 @@ import {
 
 
 import Heaader from './Header'
-import ListingItem from './ListingItem'
+import Listings from './Listings'
 // import Listings from '/Listings'
 import Footer from './Footer'
 
@@ -20,7 +20,7 @@ const App = () => {
       
       <Heaader />
       <Switch>
-          <Route exact path='/' component={ListingItem}/>
+          <Route exact path='/' component={Listings}/>
         </Switch>
 
       {/* MAKE A FOOTER WITH ALL OUR INFO */}

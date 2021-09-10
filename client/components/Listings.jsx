@@ -2,13 +2,15 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector, connect } from "react-redux";
 import { fetchPlants } from "../actions/actions";
 
+import ListingItem from './ListingItem'
 
-function Listings () {
+
+function Listings ( {dispatch}) {
 
   const plants = useSelector((state) => state.plants)
-  console.log(plants)
+
   
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchPlants());
   }, []);
@@ -16,7 +18,6 @@ function Listings () {
     return (
         <div>
             {plants.map(plant => {
-              console.log(plant)
                 return (
                 <ListingItem plant={plant} />
 

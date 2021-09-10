@@ -5,7 +5,7 @@ const connection = knex(config[env])
 
 const getAllPlantsandCategories = (db = connection) => {
   return db('listings')
-    .join('categories', 'listings.category_id', 'categories.id')
+    // .join('categories', 'listings.category_id', 'categories.id')
     .select('listings.id AS plant_id', '*')
 }
 
