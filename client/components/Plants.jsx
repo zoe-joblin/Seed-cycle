@@ -1,4 +1,5 @@
 import React from 'react'
+import PlantDetail from './PlantDetail'
 
 const Plants = () => {
   return (
@@ -16,7 +17,7 @@ const Plants = () => {
             <p className="plant-date">10th Sep</p>
             <p className="plate-location">Newtown</p>
           </div>
-          <a href="" className="plant-container-button">
+          <a href='./PlantDetail' className="plant-container-button">
               Check it out
           </a>
         </div>

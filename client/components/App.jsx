@@ -1,18 +1,30 @@
 import React from 'react'
 
-import Heaader from './Header'
+import Header from './Header'
 import Plants from './Plants'
+import PlantDetail from './PlantDetail'
+import AddPlant from './AddPlant'
 import Footer from './Footer'
 
 const App = () => {
   return (
     <>
-      
-      <Heaader />
-      <Plants />
 
-      {/* MAKE A FOOTER WITH ALL OUR INFO */}
+      {/*   HOMEPAGE  */}
+      {/* <Header />
+      <Plants />
+      <Footer /> */}
+
+      {/* ADD PLANT */}
+      <Header />
+      <AddPlant />
       <Footer />
+
+      {/*  PLANT DETAILS */}
+      {/* <Header />
+      <PlantDetail/>
+      <Footer /> */}
+
     </>
   )
 }
