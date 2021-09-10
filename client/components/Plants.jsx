@@ -1,6 +1,9 @@
+
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPlants } from "../actions/actions";
+import PlantDetail from './PlantDetail'
+
 
 const Plants = () => {
   const plants = useSelector((state) => state.plants);
@@ -25,8 +28,8 @@ const Plants = () => {
             <p className="plant-date">10th Sep</p>
             <p className="plate-location">Newtown</p>
           </div>
-          <a href="" className="plant-container-button">
-            Check it out
+          <a href='./PlantDetail' className="plant-container-button">
+              Check it out
           </a>
         </div>
 
