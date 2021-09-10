@@ -10,7 +10,6 @@ const App = () => {
       
       <Heaader />
       <Plants />
-
       {/* MAKE A FOOTER WITH ALL OUR INFO */}
       <Footer />
     </>
